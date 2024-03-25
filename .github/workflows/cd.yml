@@ -31,7 +31,7 @@ jobs:
         direction: upload
         host: ${{secrets.HOST}}
         username: ${{secrets.USERNAME}}
-        key: ${{secrets.PRIVATE_KEY}}
+        password: ${{secrets.PASSWORD}}
         source: "./test_ci_cd"
         target: "~/bin/"
         
