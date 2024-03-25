@@ -28,6 +28,7 @@ jobs:
     - name: copy built binary
       uses: nicklasfrahm/scp-action@main
       with:
+        direction: upload
         host: ${{secrets.HOST}}
         username: ${{secrets.USERNAME}}
         key: ${{secrets.PRIVATE_KEY}}
