@@ -23,19 +23,15 @@ jobs:
 
     - name: Build
       run: go build -v ./...
-  
-  deploy:
-    name: Deploy
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: copy built binary
-        uses: appleboy/scp-action@v0.1.7
-        with:
-          host: ${{secrets.HOST}}
-          username: ${{secrets.USERNAME}}
-          password: ${{secrets.PASSWORD}}
-          port: 22
-          source: "./test_ci_cd"
-          target: "~/bin/"
-          
+
+    - uses: actions/checkout@v3
+    - name: copy built binary
+      uses: appleboy/scp-action@v0.1.7
+      with:
+        host: ${{secrets.HOST}}
+        username: ${{secrets.USERNAME}}
+        password: ${{secrets.PASSWORD}}
+        port: 22
+        source: "./test_ci_cd"
+        target: "~/bin/"
+        
