@@ -33,5 +33,5 @@ jobs:
         key: ${{secrets.PRIVATE_KEY}}
         insecure_ignore_fingerprint: true
         source: "./test_ci_cd"
-        target: "~/bin/"
+        target: "~/bin"
         
