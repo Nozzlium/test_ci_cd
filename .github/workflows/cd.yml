@@ -24,7 +24,6 @@ jobs:
     - name: Build
       run: go build -v ./...
 
-    - uses: actions/checkout@v3
     - name: copy built binary
       uses: nicklasfrahm/scp-action@main
       with:
