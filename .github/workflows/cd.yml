@@ -32,6 +32,6 @@ jobs:
         username: ${{secrets.USERNAME}}
         key: ${{secrets.PRIVATE_KEY}}
         insecure_ignore_fingerprint: true
-        source: "./test_ci_cd"
-        target: "~/bin/test_ci_cd"
+        source: "test_ci_cd"
+        target: "~/"
         
