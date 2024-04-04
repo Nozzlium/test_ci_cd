@@ -1,5 +1,5 @@
 module github.com/nozzlium/test_ci_cd
 
-go 1.22.0
+go 1.22.2
 
 require github.com/stretchr/testify v1.9.0 // indirect
