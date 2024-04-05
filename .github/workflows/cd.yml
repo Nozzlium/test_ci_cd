@@ -22,7 +22,7 @@ jobs:
         go-version: '1.22.2'
 
     - name: Build
-      run: GOOS=linux GOARCH=amd64 go build -v .
+      run: GOOS=linux GOARCH=amd64 go build -v . -ldflags="-X 'main.halo=$HALO' -X 'main.berapa=$BERAPA'"
 
     - name: copy built binary
       uses: appleboy/scp-action@master
@@ -42,6 +42,4 @@ jobs:
         key: ${{secrets.PRIVATE_KEY}}
         port: 22
         script: |
-          export HALO=${{env.HALO}}
-          export BERAPA=${{env.BERAPA}}
           systemctl restart test_ci_cd
