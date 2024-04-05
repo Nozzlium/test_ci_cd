@@ -42,4 +42,5 @@ jobs:
         key: ${{secrets.PRIVATE_KEY}}
         port: 22
         script: |
+          systemctl daemon-reload
           systemctl restart test_ci_cd
