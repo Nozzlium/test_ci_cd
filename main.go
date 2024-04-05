@@ -4,15 +4,12 @@ import (
 	"errors"
 	"fmt"
 	"net/http"
+	"os"
 	"strconv"
 )
 
-var (
-	halo   string
-	berapa string
-)
-
 func main() {
+	halo := os.Getenv("HALO")
 	if halo == "" {
 		panic(
 			errors.New(
@@ -21,6 +18,7 @@ func main() {
 		)
 	}
 
+	berapa := os.Getenv("BERAPA")
 	berapaNum, err := strconv.Atoi(
 		berapa,
 	)
