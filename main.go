@@ -6,9 +6,12 @@ import (
 	"net/http"
 	"os"
 	"strconv"
+
+	"github.com/nozzlium/test_ci_cd/lib"
 )
 
 func main() {
+	lib.ReadEnv()
 	halo := os.Getenv("HALO")
 	if halo == "" {
 		panic(
