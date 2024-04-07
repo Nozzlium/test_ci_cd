@@ -36,7 +36,7 @@ func main() {
 			fmt.Fprintln(
 				w,
 				fmt.Sprint(
-					"weleh",
+					"ini sudah berubah",
 					halo,
 					berapaNum,
 				),
